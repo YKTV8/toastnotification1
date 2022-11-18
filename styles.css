@@ -63,5 +63,14 @@ nav{
     color: green;
     border-radius: 5px;
     padding: 1rem 2rem;
-    margin: .8rem;
+    margin: 0.8rem;
+}
+.toast.info{
+    color: yellow;
+}
+.toast.error{
+    color: red;
+}
+.toast.success{
+    color: green;
 }

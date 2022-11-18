@@ -8,11 +8,12 @@ const messages = [
     'mess 3',
 ]
 
-button.addEventListener('click', () => createNotice('The login and password combo do not match. Try Again')
+button.addEventListener('click', () => createNotice('The login and password combo do not match. Try Again', 'error')
 )
-function createNotice(message = null){
+function createNotice(message = null, type=null){
     const notice = document.createElement('div')
-    notice.classList.add('toasts')
+    notice.classList.add('toast')
+    notice.classList.add(type ? type : 'info')
 
     notice.innerText = message ? message : getMessage()
 
@@ -20,7 +21,7 @@ function createNotice(message = null){
 
     setTimeout( ()=> {
         notice.remove()
-    }, 1500)
+    }, 4100)
 }
 
 function getMessage(){
